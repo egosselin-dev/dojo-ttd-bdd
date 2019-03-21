@@ -71,7 +71,13 @@
                                             <?php echo null !== $player->getScorePairAt($i) ? $player->getScorePairAt($i)->getScoreB() : '-'; ?>
                                         </div>
                                         <div style="width: 60px; height: 30px;">
-                                            <?php echo $player->getScoreAt($i); ?>
+                                            <?php if (null !== $player->getScorePairAt($i) && $player->getScorePairAt($i)->isStrike()): ?>
+                                                X
+                                            <?php elseif (null !== $player->getScorePairAt($i) && $player->getScorePairAt($i)->isSpare()): ?>
+                                                /
+                                            <?php else: ?>
+                                                <?php echo $player->getScoreAt($i); ?>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                 </td>

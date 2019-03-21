@@ -51,4 +51,32 @@ class ScorePair
         $this->scoreB = $scoreB;
         return $this;
     }
+
+    /**
+     * Return true if score is a strike
+     *
+     * @return bool
+     */
+    public function isStrike() : bool
+    {
+        if (($this->scoreA == 10) || ($this->scoreB == 10)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Return true if score is a spare
+     *
+     * @return bool
+     */
+    public function isSpare() : bool
+    {
+        if ($this->scoreA + $this->scoreB == 10) {
+            return true;
+        }
+
+        return false;
+    }
 }
