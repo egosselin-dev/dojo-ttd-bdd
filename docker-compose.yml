@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  dojo:
+    container_name: testing-dojo
+    build:
+      context: $PWD/dockerfiles
+      dockerfile: $PWD/dockerfiles/Dockerfile
+    expose:
+      - 80
+    tty: true
+    volumes:
+      - $PWD/app:/var/www/html
+    networks:
+      - app-network
+    ports:
+      - "8085:80"
+
+networks:
+  app-network:
+    driver: bridge

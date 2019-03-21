@@ -1,0 +1,13 @@
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+      filters:
+        tags: "~@todo"
+  extensions:
+    Behat\MinkExtension:
+      base_url: http://localhost:8085
+      goutte:
+        guzzle_parameters:
+          verify: false
