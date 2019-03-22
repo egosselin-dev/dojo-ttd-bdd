@@ -1,4 +1,4 @@
-# Testing dojos
+# TDD / BDD dojos
 
 Start projects
 
@@ -9,13 +9,15 @@ docker-compose up -d
 Run composer
 
 ```bash
-docker-compose exec testing-dojo php app/composer.phar install
+docker-compose exec dojo php composer.phar install
 ```
 
-Get project
-
-Go to http://localhost:8085/
+Go to http://localhost:8085/ for BDD dojos
 
 ## The dojos
 
-BBD with Behat
+### BDD - Bowling scores
+
+Implement features from app/features/bowling.features
+
+Run test by executing `vendor/bin/behat`

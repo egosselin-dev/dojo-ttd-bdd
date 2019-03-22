@@ -2,7 +2,7 @@ version: '2'
 
 services:
   dojo:
-    container_name: testing-dojo
+    container_name: dojo
     build:
       context: $PWD/dockerfiles
       dockerfile: $PWD/dockerfiles/Dockerfile
